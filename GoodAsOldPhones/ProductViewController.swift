@@ -8,7 +8,7 @@
 
 import UIKit
 
-class productViewController: UIViewController {
+class ProductViewController: UIViewController {
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productButton: UIButton!
