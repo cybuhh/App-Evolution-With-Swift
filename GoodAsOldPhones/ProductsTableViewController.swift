@@ -35,7 +35,7 @@ class ProductsTableViewController: UITableViewController {
             let productVC = segue.destination as? ProductViewController
 
             guard let cell = sender as? UITableViewCell,
-                let indexPath = tableView.indexPath(for: cell) else {
+                  let indexPath = tableView.indexPath(for: cell) else {
                     return
             }
 
