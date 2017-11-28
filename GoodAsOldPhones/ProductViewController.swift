@@ -13,12 +13,16 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productButton: UIButton!
     
+    var productName: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         productNameLabel.text = "GoodAsHell"
         // productImage.image = UIImage(named: "small_devil")
         productImage.image = #imageLiteral(resourceName: "small_devil") // ImageLiteral
+        
+        productNameLabel.text = productName
     }
 
     @IBAction func productButtonTapped() {
