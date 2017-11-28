@@ -33,7 +33,13 @@ class ProductsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowProduct" {
             let productVC = segue.destination as? ProductViewController
-            productVC?.productName = "Really old phone"
+
+            guard let cell = sender as? UITableViewCell,
+                let indexPath = tableView.indexPath(for: cell) else {
+                    return
+            }
+
+            productVC?.productName = productNames?[indexPath.row]
         }
     }
     
